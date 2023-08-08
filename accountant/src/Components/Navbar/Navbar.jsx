@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 //Import icons
 import {SiConsul} from 'react-icons/si'
@@ -11,6 +11,17 @@ import logo from "../../assets/logo.png"
 
 
 export default function Navbar(){
+
+    const [active, setActive] = useState('navBarMenu')
+    const showNavBar = ()=>{
+        setActive('navBarMenu showNavBar')
+    }
+
+    const removeNavBar = ()=>{
+        setActive('navBarMenu')
+    }
+
+
     return(
         <div className="navBar flex">
             <div className="navBarOne flex">
@@ -33,26 +44,24 @@ export default function Navbar(){
                 <div className="logoDiv">
                     <img src={logo} className="Logo"/>
                 </div>
-                <div className="navBarMenu">
+                <div className={active}>
                     <ul className="menu flex">
-                        <li className="listItem">Home</li>
-                        <li className="listItem">About</li>
-                        <li className="listItem">Offers</li>
-                        <li className="listItem">Seats</li>
-                        <li className="listItem">Destination</li>
+                        <li onClick={removeNavBar} className="listItem">Home</li>
+                        <li onClick={removeNavBar} className="listItem">About</li>
+                        <li onClick={removeNavBar} className="listItem">Offers</li>
+                        <li onClick={removeNavBar} className="listItem">Seats</li>
+                        <li onClick={removeNavBar} className="listItem">Destination</li>
                     </ul>
-                    <button className="btn flex btnOne">
+                    <button onClick={removeNavBar} className="btn flex btnOne">
                         Contact
                     </button>
                 </div>
-                {/*
                 <button className="btn flex btnTwo">
                         Contact
                 </button>
-                */}
 
-                <div className="toggleIcon">
-                 <CgMenuBoxed />
+                <div onClick={showNavBar} className="toggleIcon">
+                 <CgMenuBoxed className="icon"/>
                 </div>
             </div>
         </div>
