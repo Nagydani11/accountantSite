@@ -28,7 +28,7 @@ export default function Navbar(){
                     <span>Sign out</span>
                 </div>
             </div>
-            <div className="navBarTwo">
+            <div className="navBarTwo flex">
 
                 <div className="logoDiv">
                     <img src={logo} className="Logo"/>
