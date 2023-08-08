@@ -4,6 +4,11 @@ import React from "react";
 import {SiConsul} from 'react-icons/si'
 import {BsPhoneVibrate} from 'react-icons/bs'
 import {AiOutlineGlobal} from 'react-icons/ai'
+import {CgMenuBoxed} from 'react-icons/cg'
+
+//Import images
+import logo from "../../assets/logo.png"
+
 
 export default function Navbar(){
     return(
@@ -14,13 +19,40 @@ export default function Navbar(){
                 </div>
 
                 <div className="none flex">
-                    <li className="flex"> <BsPhoneVibrate/>Support</li>
-                    <li className="flex"> <AiOutlineGlobal/>Languages</li>
+                    <li className="flex"> <BsPhoneVibrate className="icon"/>Support</li>
+                    <li className="flex"> <AiOutlineGlobal className="icon"/>Languages</li>
                 </div>
 
                 <div className="atb flex">
                     <span>Sign in</span>
                     <span>Sign out</span>
+                </div>
+            </div>
+            <div className="navBarTwo">
+
+                <div className="logoDiv">
+                    <img src={logo} className="Logo"/>
+                </div>
+                <div className="navBarMenu">
+                    <ul className="menu flex">
+                        <li className="listItem">Home</li>
+                        <li className="listItem">About</li>
+                        <li className="listItem">Offers</li>
+                        <li className="listItem">Seats</li>
+                        <li className="listItem">Destination</li>
+                    </ul>
+                    <button className="btn flex btnOne">
+                        Contact
+                    </button>
+                </div>
+                {/*
+                <button className="btn flex btnTwo">
+                        Contact
+                </button>
+                */}
+
+                <div className="toggleIcon">
+                 <CgMenuBoxed />
                 </div>
             </div>
         </div>
