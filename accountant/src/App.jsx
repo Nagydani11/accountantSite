@@ -15,6 +15,7 @@ export default function App(){
       <Navbar />
       <Home />
       <Search />
+      <Support />
     </div>
   )
 }
