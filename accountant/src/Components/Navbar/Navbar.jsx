@@ -22,6 +22,18 @@ export default function Navbar(){
     }
 
 
+    //////////////////////////////////////////////////////////////////////
+    const [noBg, addBg] = useState('navBarTwo')
+    const addBgColor = ()=>{
+        if(window.scrollY >= 10){
+            addBg('navBarTwo navbar-With-Bg')
+        }else{
+            addBg('navBarTwo')
+        }
+    }
+    
+    window.addEventListener("scroll", addBgColor)
+    
     return(
         <div className="navBar flex">
             <div className="navBarOne flex">
@@ -39,7 +51,7 @@ export default function Navbar(){
                     <span>Sign out</span>
                 </div>
             </div>
-            <div className="navBarTwo flex">
+            <div className={noBg}>
 
                 <div className="logoDiv">
                     <img src={logo} className="Logo"/>
