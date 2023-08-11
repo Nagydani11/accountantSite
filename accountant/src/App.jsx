@@ -16,6 +16,7 @@ export default function App(){
       <Home />
       <Search />
       <Support />
+      <Info />
     </div>
   )
 }
