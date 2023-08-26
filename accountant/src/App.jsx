@@ -19,6 +19,8 @@ export default function App(){
       <Info />
       <Lounge />
       <Travelers />
+      <Subscribers />
+      <Footer />
     </div>
   )
 }
