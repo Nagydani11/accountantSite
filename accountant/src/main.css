@@ -719,33 +719,53 @@ h2 {
     border-radius: 3rem;
     flex-direction: row;
   }
-  .support .sectionContainer .infoDiv .textDiv {
-    margin-top: 2rem;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .info .infoContainer .titleDiv {
-    flex-direction: row;
-  }
-  .info .infoContainer .titleDiv h2 {
-    text-align: left;
-    max-width: 500px;
-  }
-  .info .infoContainer .cardsDiv {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .lounge .sectionContainer .textDiv .grids {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .subscribe .sectionContainer .inputDiv {
-    justify-content: space-between;
-  }
-  .subscribe .sectionContainer .inputDiv .btn {
-    max-width: -webkit-max-content;
-    max-width: -moz-max-content;
-    max-width: max-content;
+  .search .sectionContainer .searchInputs {
+    grid-template-columns: repeat(3, 1fr);
   }
   .footer .sectionContainer {
-    padding-top: 2rem;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (min-width: 768px) {
+  .navBar {
+    align-items: center;
+  }
+  .navBar .navBarOne .none {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .navBar .navBarOne .none li {
+    font-size: 13px;
+    gap: 0.5rem;
+    color: var(--textColor);
+  }
+  .navBar .navBarOne .none li:hover {
+    color: var(--PrimaryColor);
+    text-decoration: underline;
+  }
+  .navBar .navBarTwo {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navBar .navBarTwo .logoDiv .Logo {
+    max-width: 20%;
+  }
+  .navBar .navBarTwo .menu {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+  .navBar .navBarTwo .menu .listItem {
+    padding: 0 0.5rem;
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--textColor);
+    font-weight: 700;
+  }
+  .navBar .navBarTwo .menu .listItem:hover {
+    color: var(--PrimaryColor);
+    font-weight: 700;
+  }
+  .navBar .navBarTwo .btnOne, .navBar .navBarTwo .toggleIcon {
+    display: none;
   }
 }/*# sourceMappingURL=main.css.map */
