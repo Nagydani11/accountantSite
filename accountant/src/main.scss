@@ -1187,19 +1187,68 @@ h2{
 @media screen and (min-width: 1332px) {
     //NAVBAR section styling
     .navBar{
-        .navBarOne{
+        .navBarTwo{
             .menu{
                 gap: 1rem;
 
                 .listItem{
                     padding: 0 1rem;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
 
-                    .listItem{
-                        padding: 0 1rem;
-                        font-size: 14px;
+    //Support section styling
+    .support{
+        .sectionContainer{
+            .infoDiv{
+                gap: 1rem;
+
+                .textDiv{
+                    .singleInfo{
+                        p{
+                           max-width: 500px; 
+                        }
                     }
                 }
             }
         }
     }
+
+    //Subscribe section styling
+    .subscribe{
+        .sectionContainer{
+            max-width: 50%;
+        }
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+    //Home section styling
+    .home{
+        .homeImages{
+            .plane{
+                width: 100%;
+                top: -150%;
+            }
+        }
+    }
+}
+
+
+::selection{
+    background: var(--PrimaryColor);
+    color: var(--whiteColor);
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background: var(--greyBg)
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--PrimaryColor);
+    border-radius: 10px;
 }
